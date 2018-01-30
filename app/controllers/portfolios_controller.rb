@@ -7,8 +7,13 @@ class PortfoliosController < ApplicationController
     @portfolio = Portfolio.find(params[:id])
   end
 
+  def angular
+    @angular_portfolio_items = Portfolio.angular
+  end
+
   def new
     @portfolio = Portfolio.new
+    3.times { @portfolio.technologies.build }
   end
 
   def create
@@ -16,7 +21,7 @@ class PortfoliosController < ApplicationController
 
     respond_to do |format|
       if @portfolio.save
-        format.html { redirect_to @portfolio, notice: 'Blog was created'}
+        format.html { redirect_to portfolio_show_path(@portfolio), notice: 'Blog was created'}
       else
         format.html { render :new}
       end
@@ -50,6 +55,6 @@ class PortfoliosController < ApplicationController
 
   private
   def portfolio_params
-    params.require(:portfolio).permit(:title, :subtitle, :body)
+    params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name])
   end
 end
