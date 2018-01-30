@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :portfolios, except: [:show]
+  get 'angular-items', to: 'portfolios#angular'
 
   resources :blogs do
     member do

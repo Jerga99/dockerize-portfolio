@@ -5,3 +5,9 @@
 <p><%= @portfolio.title %></p>
 <p><%= @portfolio.subtitle %></p>
 <p><%= @portfolio.body %></p>
+
+<h1>Technology Used: </h1>
+
+<% @portfolio.technologies.each do |tech|  %>
+  <p><%= tech.name %></p>
+<% end %>
