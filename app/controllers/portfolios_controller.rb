@@ -1,4 +1,6 @@
 class PortfoliosController < ApplicationController
+  layout "portfolio"
+
   def index
     @portfolio_items = Portfolio.all
   end
@@ -33,7 +35,7 @@ class PortfoliosController < ApplicationController
 
     respond_to do |format|
       if @portfolio.update(portfolio_params)
-        format.html { redirect_to @portfolio, notice: 'Blog was destroyed'}
+        format.html { redirect_to portfolio_show_path(@portfolio), notice: 'Blog was destroyed'}
       else
         format.html { render :update}
       end
