@@ -16,4 +16,8 @@ module ApplicationHelper
       content_tag(:p, greeting, class: "source-greeting")
     end
   end
+
+  def copyright_generator
+    @copyright = JergaViewTool::Renderer.copyright "Filip Jerga", "All rights reserved"
+  end
 end
