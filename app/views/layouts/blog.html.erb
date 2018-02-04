@@ -13,17 +13,22 @@
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
-    <%= login_helper %>
+    <div class="container">
+      <%= render "shared/blog_nav" %>
+      <%= render "shared/blog_jumbotron" %>
+      <%= render "shared/blog_featured" %>
+    </div>
 
-    <%= yield %>
+    <main role="main" class="container">
+      <div class="row">
+        <%= yield %>
+        <%= render "shared/blog_sidebar" %>
+       </div>
+    </main>
 
-    <%= render "shared/nav", location: "bottom" %>
-
+    <%= render "shared/blog_footer" %>
     <%= source_helper "blog" %>
   </body>
 </html>
