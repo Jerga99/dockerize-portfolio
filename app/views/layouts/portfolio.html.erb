@@ -15,15 +15,13 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render "shared/portfolio_nav" %>
+    <%= render "shared/portfolio_jumbotron" unless logged_in?(:site_admin) %>
 
-    <%= login_helper %>
+    <main role="main">
+      <%= yield %>
+    </main>
 
-    <%= yield %>
-
-    <%= render "shared/nav", location: "top" %>
-
-    <%= source_helper "application" %>
+    <%= render "shared/portfolio_footer" %>
   </body>
 </html>

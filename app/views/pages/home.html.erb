@@ -1,6 +1,8 @@
-<h1>Hi, <%= current_user.first_name %></h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
-<%= @blogs.inspect %>
-
-<hr>
+<div class="inner cover">
+  <h1 class="cover-heading">Welcome</h1>
+  <p class="lead">Software developement is process that requires knowledge and experience in order to perform in correct
+  scalabe way. Communication is one of key steps to deliver well suited product to clients. All of this qualities you can find embeded in my work. I will always ensure to that each stage of the process is well comunicated and fully understand.  </p>
+  <p class="lead">
+    <%= link_to("About Me", about_me_path, class: "btn btn-lg btn-secondary") %>
+  </p>
+</div>
