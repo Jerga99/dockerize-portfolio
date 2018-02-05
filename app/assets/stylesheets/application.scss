@@ -191,6 +191,21 @@ body {
   color: white;
 }
 
+.tech-news {
+  color: black;
+  margin: 20px;
+  font-size: 12px;
+
+  a {
+    color: green;
+  }
+
+  > .card {
+    padding: 30px;
+  }
+}
+
+
 
 
 
