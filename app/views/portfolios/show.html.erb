@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container portfolio-container">
   <div class="row">
     <div class="col-md-7">
-      <h1><%= image_tag(@portfolio.main_image) %></h1>
+      <h1><%= image_tag portfolio_img(@portfolio.main_image, "main"), width: '100%' %></h1>
     </div>
     <div class="col-md-5">
       <p><%= @portfolio.title %></p>
