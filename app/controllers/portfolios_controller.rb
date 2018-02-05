@@ -16,7 +16,6 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolio = Portfolio.new
-    3.times { @portfolio.technologies.build }
   end
 
   def create
@@ -32,7 +31,7 @@ class PortfoliosController < ApplicationController
   end
 
   def update
-    @portfolio = Portfolio.new()
+    @portfolio = Portfolio.find(params[:id])
 
     respond_to do |format|
       if @portfolio.update(portfolio_params)
@@ -71,6 +70,6 @@ class PortfoliosController < ApplicationController
                                       :main_image,
                                       :thumb_image,
                                       :body,
-                                      technologies_attributes: [:name])
+                                      technologies_attributes: [:id, :name, :_destroy])
   end
 end
