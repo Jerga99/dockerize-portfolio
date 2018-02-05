@@ -76,6 +76,7 @@ GEM
     carrierwave-aws (1.3.0)
       aws-sdk-s3 (~> 1.0)
       carrierwave (>= 0.7, < 2.0)
+    cocoon (1.2.11)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -261,6 +262,7 @@ GEM
       activerecord (>= 4.0.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    gritter (1.2.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.9.3)
@@ -421,12 +423,14 @@ DEPENDENCIES
   byebug
   carrierwave (~> 1.2, >= 1.2.2)
   carrierwave-aws (~> 1.3)
+  cocoon (~> 1.2, >= 1.2.11)
   coffee-rails (~> 4.2)
   devise (~> 4.2)
   dotenv-rails (~> 2.2, >= 2.2.1)
   fog
   font-awesome-rails (~> 4.7, >= 4.7.0.1)
   friendly_id (~> 5.1.0)
+  gritter (~> 1.2)
   jbuilder (~> 2.5)
   jerga_view_tool!
   jquery-rails (~> 4.3)

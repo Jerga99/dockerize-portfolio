@@ -18,6 +18,9 @@
       <% @portfolio.technologies.each do |tech|  %>
         <p><%= tech.name %></p>
       <% end %>
+      <% if logged_in?(:site_admin) %>
+        <%= link_to "Edit item", edit_portfolio_path(@portfolio), class: "btn btn-warning" %>
+      <% end %>
     </div>
   </div>
 </div>
