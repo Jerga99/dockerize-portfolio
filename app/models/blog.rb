@@ -4,9 +4,10 @@ class Blog < ApplicationRecord
     published: 1
   }
 
-  extend FriendlyId
-  friendly_id :title, use: :slugged
-
   validates_presence_of :title, :body
   belongs_to :topic
+  has_many :comments, dependent: :destroy
+
+  extend FriendlyId
+  friendly_id :title, use: :slugged
 end
