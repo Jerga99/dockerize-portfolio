@@ -10,26 +10,24 @@
     <meta name="author" content="<%= @seo_author %>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <%= favicon_link_tag 'favicon/favicon.ico' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body id="">
-    <div class="site-wrapper">
-      <div class="site-wrapper-inner">
-        <div class="cover-container">
-          <div id="background"></div>
-          <%= render "shared/application_nav" %>
+  <body>
+    <div class="body-wrapper">
+      <%= render "shared/application_nav" %>
+      <div class="container">
 
+        <div id="background"></div>
+
+        <div class="content-wrapper">
           <%= yield %>
-
-          <%= render "shared/application_footer" %>
-
-          <%= alerts %>
-
-          <%= source_helper "application" %>
         </div>
+        <%= alerts %>
       </div>
     </div>
+    <%= render "shared/application_footer" %>
   </body>
 </html>

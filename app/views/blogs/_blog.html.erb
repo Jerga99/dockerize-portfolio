@@ -1,13 +1,6 @@
 <div class="blog-post">
-  <h2 class="blog-post-title"><%= blog.title %></h2>
+  <h2 class="blog-post-title"><%= link_to(blog.title, blog_path(blog)) %></h2>
   <p class="blog-post-meta">Published <%= distance_of_time_in_words blog.created_at, Time.now %> by <a href="#">AUTHHOR!!!</a></p>
-  <% if logged_in?(:site_admin) %>
-    <p class="blog-post-meta">
-      <%= link_to blog.status, toggle_status_blog_path(blog) %> /
-      <%= link_to 'Edit', edit_blog_path(blog) %> /
-      <%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </p>
-  </p>
-  <% end %>
-  <p><%= blog.body %></p>
+  <%= render partial: "blogs/admin_actions", locals: {blog: blog} %>
+  <p><%= truncate blog.body, length: 512 %></p>
 </div>

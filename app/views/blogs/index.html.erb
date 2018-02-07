@@ -1,8 +1,10 @@
 <div class="col-md-8 blog-main">
   <h3 class="pb-3 mb-4 font-italic border-bottom">
-    Whish you nice reading ...
+    Wish you nice reading ...
   </h3>
-  <%= link_to "Write a New Blog", new_blog_path, class: "pull-right" if logged_in?(:site_admin) %>
+  <span>
+    <%= link_to "Write a New Blog", new_blog_path, class: "pull-right" if logged_in?(:site_admin) %>
+  </span>
 
   <%= paginate @blogs %>
   <%= render @blogs %>
