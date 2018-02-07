@@ -1,5 +1,5 @@
 class TopicsController < ApplicationController
-  before_action :set_sidebar_topics
+  before_action :set_sidebar_topics, :set_featured_blog
   layout 'blog'
   def index
     @topics = Topic.all
@@ -19,5 +19,9 @@ class TopicsController < ApplicationController
 
   def set_sidebar_topics
     @side_bar_topics = Topic.with_blogs || []
+  end
+
+  def set_featured_blog
+    @featured_blog = Blog.published.last
   end
 end
