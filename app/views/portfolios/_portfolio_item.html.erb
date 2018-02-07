@@ -1,14 +1,15 @@
 <div class="col-md-4">
   <div class="card mb-4 box-shadow" data-id="<%= portfolio_item.id %>">
-    <%= image_tag portfolio_img(portfolio_item.thumb_image, "thumb"), class: "card-img-top" %>
+    <%= image_tag portfolio_img(portfolio_item.thumb_image, "thumb"), width: "100%", class: "card-img-top" %>
     <div class="card-body">
-      <p class="card-text"><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %> <%= portfolio_item.subtitle %></p>
+      <p class="card-text"><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %> - <%= portfolio_item.subtitle %></p>
       <div class="d-flex justify-content-between align-items-center">
         <div class="btn-group">
-          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+          <%= link_to "View", portfolio_show_path(portfolio_item), class: "btn btn-outline-secondary" %>
+          <% if logged_in?(:site_admin) %>
+           <%= link_to "Edit", edit_portfolio_path(portfolio_item), class: "btn btn-outline-secondary" %>
+          <% end %>
         </div>
-        <!-- <small class="text-muted">9 mins</small> -->
       </div>
     </div>
   </div>
