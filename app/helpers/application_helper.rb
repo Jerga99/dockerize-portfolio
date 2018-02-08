@@ -38,6 +38,9 @@ module ApplicationHelper
       },
       {
         url: portfolios_path, title: "Portfolios"
+      },
+      {
+        url: cv_path, title: "CV"
       }
     ]
   end
