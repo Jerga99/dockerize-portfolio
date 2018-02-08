@@ -255,3 +255,20 @@ font-family: 'Roboto', sans-serif;
     }
   }
 }
+
+.new_comment {
+  margin-top: 30px;
+
+  .disabled {
+    .form-control, input {
+      pointer-events:none;
+    }
+  }
+
+  .comment-label {
+    font-weight: 700;
+    font-decoration: italic;
+  }
+}
+
+

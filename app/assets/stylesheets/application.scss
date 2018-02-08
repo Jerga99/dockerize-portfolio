@@ -18,14 +18,14 @@
 }
 
 .btn-portfolio {
-  color: #efefef;
-  background-color: transparent;
-  border: 1px solid #efefef;
+  color: #efefef !important;
+  background-color: transparent !important;
+  border: 1px solid #efefef !important;
 
-  &:hover, &:focus {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
+  &:hover, &:focus, &:active {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid black !important;
   }
 }
 
