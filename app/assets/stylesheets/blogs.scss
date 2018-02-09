@@ -6,6 +6,7 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "gritter";
+@import "shared/social-links";
 
 @font-face {
   font-family:'Lato';
@@ -134,19 +135,26 @@ font-family: 'Roboto', sans-serif;
 .blog-post {
   margin-bottom: 4rem;
 
-.blog-post-title {
-  margin-bottom: .25rem;
-  font-size: 2.5rem;
+  .blog-post-title {
+    margin-bottom: .25rem;
+    font-size: 2.5rem;
 
-  a {
-    &:hover {
-      text-decoration: none;
+    a {
+      color: #212529;
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
+  .blog-body-p > p{
+    margin-bottom: 5px;
   }
-.blog-post-meta {
-  margin-bottom: 1.25rem;
-  color: #999;
+
+  .blog-post-meta {
+    margin-bottom: 1.25rem;
+    color: #999;
   }
 }
 
@@ -227,23 +235,6 @@ font-family: 'Roboto', sans-serif;
 .blog-sidebar {
   .centered {
     text-align: center;
-  }
-
-  .social-links {
-    .fa {
-      &.fa-github {
-        color: #333;
-      }
-      &.fa-facebook {
-        color: #3b5998;
-      }
-      &.fa-linkedin {
-        color: #0077B5;
-      }
-      &.fa-google {
-        color: #dd4b39;
-      }
-    }
   }
 }
 

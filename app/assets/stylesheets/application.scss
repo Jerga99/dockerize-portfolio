@@ -1,6 +1,8 @@
 @import "bootstrap";
 @import "registration";
 @import "gritter";
+@import "shared/social-links";
+@import "font-awesome";
 // @import "blogs";
 
 /*
@@ -27,6 +29,10 @@
     color: black !important;
     border: 1px solid black !important;
   }
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 /* Links */
@@ -84,10 +90,6 @@ font-family: 'Roboto', sans-serif;
 
 .app-nav span {
   margin: 0 15px;
-}
-
-.home-title {
-  font-size: 53px;
 }
 
 #background {
@@ -179,6 +181,16 @@ font-family: 'Roboto', sans-serif;
 
 .home-container {
   margin-top: 150px;
+
+  h1 {
+    margin-bottom: 20px;
+    font-size: 60px;
+
+  }
+
+  .home-p {
+    margin-bottom: 30px;
+  }
 }
 
 .skills {
