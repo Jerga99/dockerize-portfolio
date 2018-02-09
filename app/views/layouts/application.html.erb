@@ -19,12 +19,13 @@
     <div class="body-wrapper">
       <%= render "shared/application_nav" %>
       <div class="container">
-
         <div id="background"></div>
 
+        <%= render partial: "shared/social_links_side", locals: {layout: "app"} %>
         <div class="content-wrapper">
           <%= yield %>
         </div>
+
         <%= alerts %>
       </div>
     </div>
